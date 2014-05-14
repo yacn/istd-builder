@@ -11,10 +11,10 @@ meta_xml = Nokogiri::XML::Builder.new do |xml|
       xml.string '856'
     }
     xml.pair('key' => 'backupCreationTimestamp') {
-      xml.value(1399958041.25846, 'mode' => 'float64')
+      xml.value(1400041718.1234, 'mode' => 'float64')
     }
     xml.pair('key' => 'deviceName') {
-      xml.string "Isaac's MacBook Air"
+      xml.string "SQLite and Ruby"
     }
     xml.pair('key' => 'objectsCount') {
       xml.map_
@@ -38,5 +38,5 @@ zipfile = './ruby.istd'
 
 Zip::File.open(zipfile, Zip::File::CREATE) do |zf|
   zf.add('meta.xml', './metarb.xml')
-  zf.add('main.db', 'tst.db')
+  zf.add('main.db', './tmp/check.db')
 end

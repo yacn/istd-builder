@@ -1,0 +1,29 @@
+- updated 'dbRev' under db_params
+- inserted new row into `assignments`
+  * filled in description, added Allison as partner
+  * used `course_uid` for `test1` course from coursera semester
+
+SUCCESS: was able to add an assignment to a course manually using
+above method, though it forces me to sign-in again for cloud sync
+
+TODO
+- test/verify generated "backup" from iPhone, iPad. 
+- get "Assignment" model working
+
+MVP 1.0 - Assignments
+- Create/Update/Delete Assignments
+- Send email with generated backup
+- IMAP IDLE to watch for changes
+  * will send new backups from app to special email address
+  * when backup received, extract out new SQLite db
+    - Prompt user (?) they may lose work when merging dbs
+  * when syncing
+    - backup SQLite db
+    - generate XML metadata
+    - zip files into .istd
+    - send email w/ new .istd attached
+
+MVP 1.5 - Exams
+- CRUD Exams
+
+MVP 2.0 - Better syncing logic, more models supported
