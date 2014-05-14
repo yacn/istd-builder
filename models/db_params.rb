@@ -1,8 +1,8 @@
 require 'dm-core'
 require 'dm-types'
 
-# TODO: This seems to just be collection of OS X app's preferences, need
-# to compare a data backup from iPhone, iPad vs OS X
+# NOTE: Need to increment the row name="dbRev" before syncing.
+# This seems to just be collection of name-value pairs of iStudiez preferences
 module IStudiez
   class DbParam
     include DataMapper::Resource
